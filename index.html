@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JejakKita — Cek Fakta & Etika Digital Sekolah</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigasi Utama -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">🛡️ Jejak<span>Kita</span></a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Buka Menu">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#tentang">Masalah & Tujuan</a></li>
+                <li><a href="#cek-kilat" class="nav-highlight">Cek Kilat 60 Detik</a></li>
+                <li><a href="#studi-kasus">Studi Kasus</a></li>
+                <li><a href="#lapor-etika">Panduan Lapor</a></li>
+                <li><a href="#pengguna">Sasaran Pengguna</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container hero-grid">
+            <div class="hero-text">
+                <span class="badge">✨ Literasi Digital & Etika Sekolah</span>
+                <h1>Saring Sebelum <span>Sharing</span> di Grup & Medsos Sekolah.</h1>
+                <p>Asisten cerdas berbasis web untuk membantu siswa dan warga sekolah memverifikasi kebenaran info, menjaga privasi teman, dan mencegah cyberbullying sebelum menekan tombol <em>kirim</em>.</p>
+                <div class="hero-actions">
+                    <a href="#cek-kilat" class="btn btn-primary">Mulai Cek Kilat 60 Detik →</a>
+                    <a href="#studi-kasus" class="btn btn-secondary">Coba Simulasi Kasus</a>
+                </div>
+            </div>
+            <div class="hero-card">
+                <div class="mock-chat">
+                    <div class="chat-header">Grup Kelas XI-IPA 2 (42 Anggota)</div>
+                    <div class="chat-bubble incoming">
+                        "Katanya besok ujian matematika dibatalin gara-gara guru rapat, beneran ga sih? Nih screenshot chatnya..."
+                    </div>
+                    <div class="chat-alert">
+                        ⚠️ <strong>Tahan Dulu!</strong> Sumber belum terverifikasi & potongan chat rawan salah paham.
+                    </div>
+                    <a href="#cek-kilat" class="chat-action">Periksa dengan JejakKita →</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Bagian 1: Identifikasi Masalah & Tujuan -->
+    <section id="tentang" class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Mengapa JejakKita Hadir?</h2>
+                <p>Menjawab tantangan nyata budaya FOMO dan minimnya kebiasaan verifikasi di lingkungan sekolah.</p>
+            </div>
+
+            <div class="grid-3">
+                <div class="info-card">
+                    <div class="icon-box">🚨</div>
+                    <h3>Masalah Nyata & Penyebab</h3>
+                    <p>Budaya FOMO membuat siswa terburu-buru meneruskan <em>screenshot</em> terpotong, rumor ujian, atau foto teman tanpa izin di WhatsApp, Instagram Story, dan TikTok tanpa mengecek fakta maupun risiko privasi.</p>
+                </div>
+                <div class="info-card">
+                    <div class="icon-box">🎯</div>
+                    <h3>Tujuan Solusi</h3>
+                    <p>Menyediakan alat bantu praktis yang bisa diakses cepat lewat ponsel sebelum siswa membagikan informasi—mengubah teori literasi digital menjadi kebiasaan sehari-hari.</p>
+                </div>
+                <div class="info-card">
+                    <div class="icon-box">🤝</div>
+                    <h3>Dampak Positif</h3>
+                    <p>Mencegah konflik antarkelas, menekan <em>cyberbullying</em> berbasis gosip, menjaga kelancaran informasi akademik, serta melindungi privasi dan keamanan data warga sekolah.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bagian 2: Fitur Utama 1 - Cek Kilat 60 Detik (Interaktif) -->
+    <section id="cek-kilat" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge">Fitur Utama 1</span>
+                <h2>Cek Kilat 60 Detik (Fact & Privacy Checker)</h2>
+                <p>Jawab 5 pertanyaan singkat di bawah ini sebelum meneruskan pesan atau mengunggah foto/video.</p>
+            </div>
+
+            <div class="checker-box">
+                <div class="progress-wrapper">
+                    <div class="progress-bar" id="progressBar"></div>
+                </div>
+                <p class="progress-text" id="progressText">Terjawab: 0 dari 5 poin pemeriksaan</p>
+
+                <form id="cekKilatForm">
+                    <!-- Pertanyaan 1 -->
+                    <div class="question-item">
+                        <p class="q-title">1. Sumber Informasi: Apakah info ini berasal dari sumber resmi sekolah (Guru, Wali Kelas, OSIS, atau akun resmi)?</p>
+                        <div class="options">
+                            <label><input type="radio" name="q1" value="2"> Ya, sumber resmi & jelas</label>
+                            <label><input type="radio" name="q1" value="1"> Katanya dari teman / grup lain</label>
+                            <label><input type="radio" name="q1" value="0"> Tidak jelas / anonim</label>
+                        </div>
+                    </div>
+
+                    <!-- Pertanyaan 2 -->
+                    <div class="question-item">
+                        <p class="q-title">2. Keutuhan Konteks: Apakah informasi atau tangkapan layar (screenshot) ini utuh dan tidak dipotong?</p>
+                        <div class="options">
+                            <label><input type="radio" name="q2" value="2"> Ya, utuh dari awal sampai akhir</label>
+                            <label><input type="radio" name="q2" value="1"> Kurang yakin / hanya potongan</label>
+                            <label><input type="radio" name="q2" value="0"> Terpotong / berpotensi satire/editan</label>
+                        </div>
+                    </div>
+
+                    <!-- Pertanyaan 3 -->
+                    <div class="question-item">
+                        <p class="q-title">3. Izin & Privasi: Jika memuat wajah, nama, atau chat orang lain, apakah sudah mendapat izin mereka?</p>
+                        <div class="options">
+                            <label><input type="radio" name="q3" value="2"> Sudah izin / tidak memuat privasi orang</label>
+                            <label><input type="radio" name="q3" value="1"> Belum sempat tanya, tapi niatnya bercanda</label>
+                            <label><input type="radio" name="q3" value="0"> Tidak izin / memalukan orang lain</label>
+                        </div>
+                    </div>
+
+                    <!-- Pertanyaan 4 -->
+                    <div class="question-item">
+                        <p class="q-title">4. Keamanan Data: Apakah unggahan bebas dari data sensitif (nomor HP, alamat, kartu pelajar, lokasi real-time)?</p>
+                        <div class="options">
+                            <label><input type="radio" name="q4" value="2"> Aman, tidak ada data sensitif</label>
+                            <label><input type="radio" name="q4" value="1"> Ada sedikit terlihat di latar belakang</label>
+                            <label><input type="radio" name="q4" value="0"> Terlihat jelas data pribadi/lokasi</label>
+                        </div>
+                    </div>
+
+                    <!-- Pertanyaan 5 -->
+                    <div class="question-item">
+                        <p class="q-title">5. Dampak Emosi & Sosial: Apakah informasi ini bermanfaat dan tidak memicu kepanikan atau perundungan?</p>
+                        <div class="options">
+                            <label><input type="radio" name="q5" value="2"> Bermanfaat & menenangkan</label>
+                            <label><input type="radio" name="q5" value="1"> Hanya untuk hiburan/gosip ringan</label>
+                            <label><input type="radio" name="q5" value="0"> Memicu emosi, panik, atau ejekan</label>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Analisis Kelayakan Konten 🔍</button>
+                        <button type="button" id="resetBtn" class="btn btn-outline">Reset</button>
+                    </div>
+                </form>
+
+                <!-- Hasil Analisis Dinamis -->
+                <div id="resultBox" class="result-box hidden">
+                    <div class="result-header">
+                        <span id="resultBadge" class="status-badge">STATUS</span>
+                        <h3 id="resultTitle">Judul Hasil</h3>
+                    </div>
+                    <p id="resultDesc">Penjelasan hasil akan muncul di sini.</p>
+                    <ul id="resultTips" class="result-tips"></ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bagian 3: Fitur Utama 2 - Kamus & Studi Kasus Interaktif -->
+    <section id="studi-kasus" class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge">Fitur Utama 2</span>
+                <h2>Kamus & Simulasi Studi Kasus Sekolah</h2>
+                <p>Pilih situasi di bawah ini, tentukan sikapmu, dan lihat analisis dampak digitalnya.</p>
+            </div>
+
+            <div class="case-tabs" id="caseTabs">
+                <button class="tab-btn active" data-case="0">Kasus 1: Potongan Chat</button>
+                <button class="tab-btn" data-case="1">Kasus 2: Foto Aib Teman</button>
+                <button class="tab-btn" data-case="2">Kasus 3: Hoaks Jadwal Ujian</button>
+            </div>
+
+            <div class="case-card" id="caseDisplay">
+                <!-- Diisi secara dinamis oleh script.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Bagian 4: Fitur Utama 3 - Kotak Lapor & Konsultasi Etika -->
+    <section id="lapor-etika" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge">Fitur Utama 3</span>
+                <h2>Panduan Tindakan & Kotak Konsultasi Etika</h2>
+                <p>Sudah terlanjur melihat atau mengalami penyebaran rumor? Ikuti langkah praktis berikut.</p>
+            </div>
+
+            <div class="grid-2">
+                <div class="steps-card">
+                    <h3>Langkah Darurat Saat Terjadi Kasus</h3>
+                    <div class="step-item">
+                        <span class="step-num">1</span>
+                        <div>
+                            <h4>Jangan Ikut Menyebarkan (Stop Chain)</h4>
+                            <p>Hentikan rantai pesan di dirimu. Jangan me-repost meskipun berniat menyindir balik.</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-num">2</span>
+                        <div>
+                            <h4>Simpan Bukti Digital</h4>
+                            <p>Ambil tangkapan layar utuh (termasuk tanggal, waktu, dan akun pengirim) sebagai arsip jika dibutuhkan.</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-num">3</span>
+                        <div>
+                            <h4>Klarifikasi & Minta Penghapusan</h4>
+                            <p>Jika menyangkut privasimu, hubungi pengunggah secara sopan untuk menghapus konten tersebut.</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-num">4</span>
+                        <div>
+                            <h4>Lapor ke Guru BK / Wali Kelas</h4>
+                            <p>Segera lapor jika konten mengarah pada perundungan, ancaman, atau pelanggaran privasi berat.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="consult-card">
+                    <h3>Asisten Rekomendasi Pelaporan</h3>
+                    <p>Pilih kondisi yang sedang kamu alami untuk mendapatkan saran langkah dan draf pesan pelaporan:</p>
+                    <select id="issueSelect" class="form-select">
+                        <option value="">-- Pilih Situasi yang Terjadi --</option>
+                        <option value="rumor">Saya menjadi korban gosip / rumor di grup kelas</option>
+                        <option value="privasi">Foto/video saya disebar tanpa izin di Story/TikTok</option>
+                        <option value="hoaks">Ada info jadwal/aturan sekolah yang simpang siur</option>
+                        <option value="saksi">Saya melihat teman lain dirundung secara online</option>
+                    </select>
+                    <div id="consultOutput" class="consult-output">
+                        <p class="placeholder-text">Saran tindakan dan contoh draf pesan kepada Wali Kelas/Guru BK akan muncul di sini setelah kamu memilih situasi.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bagian 5: Sasaran Pengguna & Cara Pemanfaatan -->
+    <section id="pengguna" class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Sasaran Pengguna & Cara Pemanfaatannya</h2>
+                <p>Dirancang ringan untuk digunakan seluruh ekosistem sekolah.</p>
+            </div>
+
+            <div class="table-wrapper">
+                <table class="user-table">
+                    <thead>
+                        <tr>
+                            <th>Sasaran Pengguna</th>
+                            <th>Peran</th>
+                            <th>Cara Menggunakan JejakKita</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Siswa SMP / SMA</strong></td>
+                            <td>Pengguna utama sehari-hari</td>
+                            <td>Membuka <em>Cek Kilat</em> sebelum share info ke grup kelas atau medsos, serta memainkan studi kasus singkat saat jam kosong/literasi.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Guru BK / Wali Kelas / OSIS</strong></td>
+                            <td>Fasilitator & edukator</td>
+                            <td>Menggunakan studi kasus di <em>JejakKita</em> sebagai bahan diskusi singkat saat briefing pagi, kelas inspirasi, atau sosialisasi MPLS.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p><strong>JejakKita</strong> — Panduan & Asisten Cerdas Cek Fakta dan Etika Berbagi Informasi di Sekolah.</p>
+            <p class="footer-sub">Dikembangkan sebagai proyek literasi digital sekolah. Saring sebelum sharing!</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
